@@ -7,9 +7,9 @@ export class Home extends Component {
                 <div>
                     <h2>Title</h2>
                     <p>date</p>
-                    <img />
+                    {/* <img />
                     <p>short text</p>    
-                    <a>Read More</a>
+                    <a>Read More</a> */}
                 </div>
                 
             </section>

@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
+import Store from '../Store/Store'
 
 export class Blog extends Component {
+    state = {content: Store}
+    renderContent (content)  {
+      const blogContent = [];
+      content.forEach(element => {
+        console.log('1')
+        if(element.type === 'paragraph') blogContent.push(<p>{element.content}</p>);
+        else if (element.type === `img`) blogContent.push(<img class={element.size} src={element.src} alt={element.alt} /> ); 
+      })
+    return blogContent;
+    }
     render() {
+        const {title, blogContent} = this.state.content;
         return (
             <React.Fragment>
               <section className="entry-header">
-                <h2>Title</h2>
+              <h2>{title}</h2>
                 <p>Tags</p>
                 <p>Leave a comment</p>
               </section>
               <section className="entry-content">
-                <p>content</p>
+                {this.renderContent(blogContent)}
               </section>
               <section className="entry-footer">
                 <div>Share This</div>
-                <div class="prev-nav"></div>
+                <div className="prev-nav"></div>
                 <p>Leave a comment</p>
               </section>
             </React.Fragment>
