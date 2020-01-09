@@ -6,11 +6,10 @@ export class Blog extends Component {
     renderContent (content)  {
       const blogContent = [];
       content.forEach(element => {
-        console.log('1')
         if(element.type === 'paragraph') blogContent.push(<p>{element.content}</p>);
         else if (element.type === `img`) blogContent.push(<img class={element.size} src={element.src} alt={element.alt} /> ); 
       })
-    return blogContent;
+      return blogContent;
     }
     render() {
         const {title, blogContent} = this.state.content;
@@ -25,9 +24,19 @@ export class Blog extends Component {
                 {this.renderContent(blogContent)}
               </section>
               <section className="entry-footer">
-                <div>Share This</div>
-                <div className="prev-nav"></div>
-                <p>Leave a comment</p>
+                <div>
+                  <h2>Share This:</h2>
+                  <button>Twitter</button>
+                  <button>Facebook</button>
+                </div>
+                <div className="prev-nav">
+
+                </div>
+                <form>
+                  <h2>Leave A Comment</h2>
+                  <input type="text"/>
+                  <button>Post Comment</button>
+                </form>
               </section>
             </React.Fragment>
         )
