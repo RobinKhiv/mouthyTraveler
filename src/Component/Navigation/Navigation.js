@@ -7,7 +7,7 @@ export default function Navigation() {
         <nav>
             <Link to=''>Home</Link>
             <Link to=''>Travel</Link>
-            <Link to=''>About Me</Link>
+            <Link to='/about'>About Me</Link>
             <Link to=''>Restaurants</Link>
             <Link to=''>Guides</Link>
             <Link to=''>Events</Link>

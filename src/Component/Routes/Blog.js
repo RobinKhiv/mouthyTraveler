@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Store from '../Store/Store'
+import {blogPost} from '../Store/Store'
 
 export class Blog extends Component {
-    state = {content: Store}
+    state = {content: blogPost}
     renderContent (content)  {
       const blogContent = [];
       content.forEach(element => {
