@@ -9,7 +9,6 @@ import './App.css';
 function App() {
   return (
     <React.Fragment>
-
     <Navigation/>
     <Switch>
       <Route exact path={'/'} component={Home}/>

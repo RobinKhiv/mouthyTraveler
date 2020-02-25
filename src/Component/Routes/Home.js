@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Home extends Component {
     render() {
         return (
-            <section>
+            <section class="container">
                 <ul>
                     <li>
                         <h2>Title</h2>
