@@ -12,7 +12,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.card{
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,11 +33,4 @@
 body{
   padding-top: 4em;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
